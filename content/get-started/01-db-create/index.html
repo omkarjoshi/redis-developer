@@ -50,8 +50,100 @@
     <main role="main">
 
       <div class="container marketing pt-5">
-        <h1>DB Creation</h1>
-<p>This page explain the db creation</p>
+        <h1>How to create a Redis Database</h1>
+<p>This page explain the steo by step Redis database creation process for all the different options listed below:</p>
+<h1>Cloud</h1>
+<ol>
+<li>You will have to create Redis Cloud account by visiting <a href="https://redislabs.com/try-redis-modules-for-free">link</a> below. Once you click on “Get Started”, you will receive an email with a link to activate your account and complete your signup process.</li>
+</ol>
+<p><a href="https://redislabs.com/try-redis-modules-for-free"><img src="/redis-developer/images/getting_started/recloud.png" alt=""></a></p>
+<ol start="2">
+<li>Next, you will have to add  Redis Enterprise Cloud Essentials subscription. In the Redis Enterprise Cloud menu, click Subscriptions. At the bottom of the page, click the “+” sign.</li>
+</ol>
+<p><img src="/redis-developer/images/getting_started/recloud2.png" alt="My Image"></p>
+<ol start="3">
+<li>For the cloud provider, select Amazon AWS</li>
+</ol>
+<p><img src="/redis-developer/images/getting_started/recloud3.png" alt="My Image"></p>
+<ol start="4">
+<li>For the region where you want to use the subscription, select ap-south-1. Please note that it’s currently available only in the AWS/Mumbai</li>
+</ol>
+<p><img src="/redis-developer/images/getting_started/recloud5.png" alt="My Image"></p>
+<ol start="5">
+<li>In the Redis Enterprise Cloud service levels, select the Redis Cloud Essentials 30MB/1 Database level</li>
+</ol>
+<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud6.png" alt="My Image"></p>
+<ol start="6">
+<li>
+<p>Click Create. After you create a subscription, you can create a database:</p>
+</li>
+<li>
+<p>Enter a name for the database of your choice</p>
+</li>
+</ol>
+<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud7.png" alt="My Image"></p>
+<ol start="8">
+<li>Click &quot;Activate&quot; and wait for few seconds till it gets activated. Once fully activated, you will see the database endpoints as shown below:</li>
+</ol>
+<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud8.png" alt="My Image"></p>
+<h1>Docker</h1>
+<h3>Install Docker Engine</h3>
+<p>Go to the Docker installation page for your operating system for detailed instructions about installing Docker Engine:</p>
+<h3>Linux (Ubuntu/Debian)</h3>
+<pre><code>curl -fsSL https://get.docker.com/ | sh
+</code></pre>
+<h3>MacOS</h3>
+<p>Refer https://docs.docker.com/docker-for-mac/install/ to install Docker Desktop for Mac.</p>
+<h3>Run the container</h3>
+<p>To pull and start the Redis Enterprise Software Docker container, run this docker run command in the terminal or command-line for your operating system.</p>
+<p>Note: On Windows, make sure Docker is configured to run Linux-based containers.</p>
+<pre><code>docker run -d --cap-add sys_resource --name rp -p 8443:8443 -p 9443:9443 -p 12000:12000 redislabs/redis
+</code></pre>
+<p>The Docker container with RS runs on your localhost with port 8443 open for HTTPS connections, 9443 for REST API connections, and port 12000 open for redis client connections. You can publish other ports with -p &lt;host_port&gt;:&lt;container_port&gt;.</p>
+<h3>Set up a cluster</h3>
+<p>In the web browser on the host machine, go to https://localhost:8443 to see the Redis Enterprise Software web console.</p>
+<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud10.png" alt="My Image"></p>
+<ul>
+<li>In the Node Configuration settings, enter a cluster FQDN such as cluster.local. Then click Next button.</li>
+</ul>
+<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud11.png" alt="My Image"></p>
+<ul>
+<li>Enter your license key, if you have one. If not, click the Next button to use the trial version.</li>
+</ul>
+<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud12.png" alt="My Image"></p>
+<ul>
+<li>Enter an email and password for the admin account for the web console.</li>
+</ul>
+<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud13.png" alt="My Image"></p>
+<ul>
+<li>
+<p>These credentials are also used for connections to the REST API.</p>
+</li>
+<li>
+<p>Click OK to confirm that you are aware of the replacement of the HTTPS SSL/TLS certificate on the node, and proceed through the browser warning</p>
+</li>
+</ul>
+<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud14.png" alt="My Image"></p>
+<h3>Create a database</h3>
+<ul>
+<li>
+<p>Select “redis database” and the “single region” deployment, and click Next.</p>
+</li>
+<li>
+<p>Enter a database name such as demodb.</p>
+</li>
+</ul>
+<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud16.png" alt="My Image"></p>
+<ul>
+<li>Click Show advanced options and, in the Endpoint port number, enter 12000 for the port number.If you cannot activate the database because of a memory limitation, make sure that Docker has enough memory allocated in the Advanced section of Docker Settings.</li>
+</ul>
+<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud18.png" alt="My Image"></p>
+<p>If port 12000 is not available, enter any available port number between 10000 to 19999 and connect to the database with that port number.</p>
+<p>The database configuration is shown. When you see a green check mark, the database is activated and ready for you to use.</p>
+<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud20.png" alt="My Image"></p>
+<p>You now have a Redis database!</p>
+<h1>Redis Enterprise</h1>
+<h1>From Sources</h1>
 
       </div>
 
@@ -62,7 +154,7 @@
           <!-- FOOTER -->
           <footer class="container">
             <p class="float-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            <p>&copy; 2011-2020 RedisLabs. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
           </footer>
         </main>
     
