@@ -72,7 +72,7 @@
 <ol start="5">
 <li>In the Redis Enterprise Cloud service levels, select the Redis Cloud Essentials 30MB/1 Database level</li>
 </ol>
-<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud6.png" alt="My Image"></p>
+<p><img src="/redis-developer/images/getting_started/recloud6.png" alt="My Image"></p>
 <ol start="6">
 <li>
 <p>Click Create. After you create a subscription, you can create a database:</p>
@@ -81,11 +81,11 @@
 <p>Enter a name for the database of your choice</p>
 </li>
 </ol>
-<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud7.png" alt="My Image"></p>
+<p><img src="/redis-developer/images/getting_started/recloud7.png" alt="My Image"></p>
 <ol start="8">
 <li>Click &quot;Activate&quot; and wait for few seconds till it gets activated. Once fully activated, you will see the database endpoints as shown below:</li>
 </ol>
-<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud8.png" alt="My Image"></p>
+<p><img src="/redis-developer/images/getting_started/recloud8.png" alt="My Image"></p>
 <h1>Docker</h1>
 <h3>Install Docker Engine</h3>
 <p>Go to the Docker installation page for your operating system for detailed instructions about installing Docker Engine:</p>
@@ -102,19 +102,19 @@
 <p>The Docker container with RS runs on your localhost with port 8443 open for HTTPS connections, 9443 for REST API connections, and port 12000 open for redis client connections. You can publish other ports with -p &lt;host_port&gt;:&lt;container_port&gt;.</p>
 <h3>Set up a cluster</h3>
 <p>In the web browser on the host machine, go to https://localhost:8443 to see the Redis Enterprise Software web console.</p>
-<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud10.png" alt="My Image"></p>
+<p><img src="/redis-developer/images/getting_started/recloud10.png" alt="My Image"></p>
 <ul>
 <li>In the Node Configuration settings, enter a cluster FQDN such as cluster.local. Then click Next button.</li>
 </ul>
-<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud11.png" alt="My Image"></p>
+<p><img src="/redis-developer/images/getting_started/recloud11.png" alt="My Image"></p>
 <ul>
 <li>Enter your license key, if you have one. If not, click the Next button to use the trial version.</li>
 </ul>
-<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud12.png" alt="My Image"></p>
+<p><img src="/redis-developer/images/getting_started/recloud12.png" alt="My Image"></p>
 <ul>
 <li>Enter an email and password for the admin account for the web console.</li>
 </ul>
-<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud13.png" alt="My Image"></p>
+<p><img src="/redis-developer/images/getting_started/recloud13.png" alt="My Image"></p>
 <ul>
 <li>
 <p>These credentials are also used for connections to the REST API.</p>
@@ -123,7 +123,7 @@
 <p>Click OK to confirm that you are aware of the replacement of the HTTPS SSL/TLS certificate on the node, and proceed through the browser warning</p>
 </li>
 </ul>
-<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud14.png" alt="My Image"></p>
+<p><img src="/redis-developer/images/getting_started/recloud14.png" alt="My Image"></p>
 <h3>Create a database</h3>
 <ul>
 <li>
@@ -133,14 +133,14 @@
 <p>Enter a database name such as demodb.</p>
 </li>
 </ul>
-<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud16.png" alt="My Image"></p>
+<p><img src="/redis-developer/images/getting_started/recloud16.png" alt="My Image"></p>
 <ul>
 <li>Click Show advanced options and, in the Endpoint port number, enter 12000 for the port number.If you cannot activate the database because of a memory limitation, make sure that Docker has enough memory allocated in the Advanced section of Docker Settings.</li>
 </ul>
-<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud18.png" alt="My Image"></p>
+<p><img src="/redis-developer/images/getting_started/recloud18.png" alt="My Image"></p>
 <p>If port 12000 is not available, enter any available port number between 10000 to 19999 and connect to the database with that port number.</p>
 <p>The database configuration is shown. When you see a green check mark, the database is activated and ready for you to use.</p>
-<p><img src="https://github.com/ajeetraina/redis-developer/blob/master/content/get-started/images/recloud20.png" alt="My Image"></p>
+<p><img src="/redis-developer/images/getting_started/recloud20.png" alt="My Image"></p>
 <p>You now have a Redis database!</p>
 <h1>Redis Enterprise</h1>
 <h1>From Sources</h1>
