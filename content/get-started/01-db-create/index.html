@@ -130,7 +130,8 @@
           
           <h1>How to create a Redis Database</h1>
 <p>This page explain the steo by step Redis database creation process for all the different options listed below:</p>
-<h1>Cloud</h1>
+<details><summary>
+# Using Cloud</summary>
 <ol>
 <li>You will have to create Redis Cloud account by visiting <a href="https://redislabs.com/try-redis-modules-for-free">link</a> below. Once you click on “Get Started”, you will receive an email with a link to activate your account and complete your signup process.</li>
 </ol>
@@ -164,10 +165,13 @@
 <li>Click &quot;Activate&quot; and wait for few seconds till it gets activated. Once fully activated, you will see the database endpoints as shown below:</li>
 </ol>
 <p><img src="/redis-developer/images/getting_started/recloud8.png" alt="My Image"></p>
-<h1>Docker</h1>
+</details>
+<details>
+<summary># Using Docker</summary>
 <h3>Pre-requisite</h3>
 <ul>
-<li>Ensure that Docker is installed in your system. Refer https://docs.docker.com/docker-for-mac/install/ to install Docker on Mac.</li>
+<li>Ensure that Docker is installed in your system.
+If you're new, refer https://docs.docker.com/docker-for-mac/install/ to install Docker on Mac.</li>
 </ul>
 <h3>Run the container</h3>
 <p>To pull and start the Redis Enterprise Software Docker container, run this docker run command in the terminal or command-line for your operating system.</p>
@@ -217,8 +221,33 @@
 <p>The database configuration is shown. When you see a green check mark, the database is activated and ready for you to use.</p>
 <p><img src="/redis-developer/images/getting_started/recloud20.png" alt="My Image"></p>
 <p>You now have a Redis database!</p>
-<h1>Redis Enterprise</h1>
-<h1>From Sources</h1>
+</details>
+<details><summary>
+# Using Redis Enterprise
+</summary>
+## Install Redis Enterprise Software 
+<p>You can download the binaries from the <a href="https://www.redislabs.com/redis-enterprise-software/download-center/software/">Redis Enterprise Download Center</a> and copy the download package to machine with a Linux-based OS. To untar the image:</p>
+<pre><code>tar vxf &lt;downloaded tar file name&gt;
+</code></pre>
+<p>Once the tar command completes, install RS with the install.sh script in the current directory.</p>
+<pre><code>sudo ./install.sh -y
+</code></pre>
+<h2>Setting up a cluster</h2>
+<p>In the web browser on the host machine, go to https://localhost:8443 to see the Redis Enterprise Software web console.</p>
+<p>Note: Depending on your browser, you may see a certificate error. You can safely continue to the web console.
+If you see an error from nginx, try again after a few minutes.
+Click Setup to start the node configuration steps.</p>
+<p><img src="/redis-developer/images/getting_started/recloud21.png" alt="My Image"></p>
+<p>In the Node Configuration settings, enter a cluster FQDN such as cluster.local. Then click Next button.</p>
+<p>Enter your license key, if you have one. If not, click the Next button to use the trial version.</p>
+<p>Enter an email and password for the admin account for the web console.</p>
+<p>These credentials are also used for connections to the REST API.</p>
+<p>Click OK to confirm that you are aware of the replacement of the HTTPS SSL/TLS certificate on the node, and proceed through the browser warning.</p>
+<h2>Create a database</h2>
+<p>Select “redis database” and the “single region” deployment, and click Next.</p>
+<p>Enter a database name such as database1 and click Activate to create your database.</p>
+<p>You now have a Redis database!</p>
+</details>
 
 
         </main>
