@@ -131,13 +131,45 @@
           <h1>Explore the data</h1>
 <p>Explore your data with Redis Insight</p>
 <ol>
-<li>
-<p>Import a Dataset</p>
-</li>
-<li>
-<p>Connect to Redis</p>
-</li>
+<li>Connect to Redis</li>
 </ol>
+<detail>
+<summary> Using RedisInsight
+</summary>
+<p>RedisInsight provides an intuitive and efficient GUI for Redis, allowing you to interact with your databases and manage your data—with built-in support for most popular Redis modules. It provides tools to analyze the memory, profile the performance of your database usage, and guide you toward better Redis usage.
+To learn more about RedisInsight: https://redislabs.com/redis-enterprise/redis-insight</p>
+<h2>Pre-requisite</h2>
+<p>Ensure that you have Docker binaries already installed in your system. Run the below command to bring up Docker container to start RedisInsight application services:</p>
+<pre><code>$ docker run -v redisinsight:/db -p 8001:8001 redislabs/redisinsight:latest
+</code></pre>
+<p>When you run the above command, it will start the RedisInsight applications as shown below:</p>
+<pre><code>INFO 2020-08-01 19:10:16,255 redisinsight Application version: 1.6.3
+INFO 2020-08-01 19:10:16,257 redisinsight First start detected
+INFO 2020-08-01 19:10:16,343 redisinsight Created desktop-mode user.
+INFO 2020-08-01 19:10:16,346 redisinsight Created installation ID: '02ba76b68cb645ab8151728a9418625c'
+INFO 2020-08-01 19:10:16,349 redisinsight Application first start event sent.
+INFO:redisinsight:Application first start event sent.
+INFO 2020-08-01 19:10:16,351 redisinsight Created application update history entry for version 1.6.3
+INFO:redisinsight:Created application update history entry for version 1.6.3
+INFO 2020-08-01 19:10:16,353 redisinsight Application startup event sent.
+INFO:redisinsight:Application startup event sent.
+INFO 2020-08-01 19:10:16,355 redisinsight_startup Starting waitress
+INFO:redisinsight_startup:Starting waitress
+</code></pre>
+<p>Head over to your web browser and open http://localhost:8001</p>
+<p>Congratulations! You have successfully installed RedisInsight and now ready to inspect your Redis data, monitor health, and perform runtime server configuration with a browser-based management interface for your Redis deployment.</p>
+<p>Once you accept EULA and click “Confirm”, you are ready to add Redis Databases as shown below:</p>
+<p><img src="/redis-developer/images/getting_started/recloud300.png" alt="My Image"></p>
+<p>Choose “Add Database”.</p>
+<p><img src="/redis-developer/images/getting_started/recloud301.png" alt="My Image"></p>
+<p>Enter details like name, host(endpoint), port and password. You can skip username as of now.</p>
+<p><img src="/redis-developer/images/getting_started/recloud302.png" alt="My Image"></p>
+<p>Click “Add Redis Database”.</p>
+<p><img src="/redis-developer/images/getting_started/recloud303.png" alt="My Image"></p>
+<p>Click on the Box and you shall be able to see the RedisInsight dashboard for the first time.</p>
+<p><detail><summary>
+2. Import a Dataset</p>
+</summary>
 
 
         </main>
