@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Java and Redis</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/redis-developer/css/redis-developer.css" rel="stylesheet">
+  </head>
+  <body>
+
+    
+    <header>
+      <!-- Fixed navbar --> 
+      <nav class="navbar navbar-expand navbar-dark bg-dark">
+
+        <a class="nav-link" href="/redis-developer/">
+          <span class="navbar-brand" >
+          <img src="images/logo/logo_small.png" height="30" />
+          Redis Developer
+          </span> 
+        </a> 
+
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarNav">
+        
+          <ul class="navbar-nav nav-fill w-100">
+
+            <li class="nav-item active ">
+              <a class="nav-link" target="_blank" href="https://university.redislabs.com">LEARN</a>
+            </li>            
+
+            <li class="nav-item active ">
+              <a class="nav-link" target="_blank" href="https://redis.io/commands">COMMANDS</a>
+            </li>            
+
+            <li class="nav-item active ">
+              <a class="nav-link" target="_blank" href="https://docs.redislabs.com">DOCS</a>
+            </li>            
+          </ul>
+          </div>
+          </div>
+          
+      </nav>
+    </header>
+
+
+
+    
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-md-3 col-xl-2 bd-sidebar">
+
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation"><div class="bd-toc-item active">
+            <a class="bd-toc-link" href="/redis-developer/">
+              Home
+            </a>
+
+        <ul class="nav bd-sidenav mb-2">
+          <li class="active bd-sidenav-active">
+            <a class="bd-toc-link" href="/redis-developer/content/develop/">
+              Develop
+            </a>
+          </li>
+          <li>
+            <a href="/redis-developer/content/develop/java">Java</a>
+          </li>
+          <li>
+            <a href="/redis-developer/content/develop/python">Python</a>
+          </li>
+          <li>
+            <a href="/redis-developer/content/develop/nodejs">Node.js</a>
+          </li>
+          <li>
+            <a href="/redis-developer/content/develop/dotnet">C#/.Net</a>
+          </li>
+          <li>
+            <a href="/redis-developer/content/develop/golang">Go</a>
+          </li>
+          <li>
+            <a href="/redis-developer/content/develop/">Others</a>
+          </li>
+        </ul>
+
+        <ul class="nav bd-sidenav mb-2"">
+          <li class="active bd-sidenav-active bd-toc-link">
+              Do more with Redis
+          </li>
+          <li>
+            <a href="https://redisearch.io">RediSearch</a>
+          </li>
+          <li>
+            <a href="https://redisjson.io">RedisJSON</a>
+          </li>
+          <li>
+            <a href="https://redisgears.io">RedisGears</a>
+          </li>
+          <li>
+            <a href="https://redisai.io">RedisAI</a>
+          </li>
+          <li>
+            <a href="https://redisgraph.io">RedisGraph</a>
+          </li>
+          <li>
+            <a href="https://redistimeseries.io">RedisTimeSeries</a>
+          </li>
+          <li>
+            <a href="https://redisbloom.io">RedisBloom</a>
+          </li>
+        </ul>
+
+        <ul class="nav bd-sidenav mb-2"">
+          <li class="active bd-sidenav-active">
+            <a class="bd-toc-link" href="/redis-developer/content/tools/">
+              Tools
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav bd-sidenav mb-2"">
+          <li class="active bd-sidenav-active bd-toc-link">
+              Use Cases
+          </li>
+          <li>
+            <a href="https://redislabs.com/solutions/use-cases/microservices/" _target="blank">Microservices</a>
+          </li>
+          <li>
+            <a href="https://redislabs.com/solutions/use-cases/caching/" _target="blank">Caching</a>
+          </li>
+          <li>
+            <a href="https://redislabs.com/solutions/use-cases/session-management/" _target="blank">Session Management</a>
+          </li>
+          <li>
+            <a href="https://redislabs.com/solutions/use-cases/fraud-mitigation/" _target="blank">Fraud Detection</a>
+          </li>
+          <li>
+            <a href="https://redislabs.com/solutions/use-cases/real-time-inventory/" _target="blank">Real-Time Inventory</a>
+          </li>
+          <li>
+            <a href="https://redislabs.com/solutions/use-cases/messaging/" _target="blank">Messaging</a>
+          </li>
+        </ul>    
+
+    </div>
+
+</nav>
+
+        </div>
+
+
+        
+
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          
+          <h1>Develop with Redis &amp; Java</h1>
+<div class="d-flex justify-content-center">
+<img src="/redis-developer/images/logo/logo_small.png" width="80"" /> <span style="font-size:50px">+<span> 
+<img src="/redis-developer/images/logo/java.png" width="80"> 
+</div>
+<p><strong>Getting Started</strong></p>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Jedis</a>
+<div>
+</div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Lettuce</a>
+  </li>
+</ul>
+<p>1- Add dependencies to your Maven or Gradle project file:</p>
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;redis.clients&lt;/groupId&gt;
+    &lt;artifactId&gt;jedis&lt;/artifactId&gt;
+    &lt;version&gt;3.3.0&lt;/version&gt;
+    &lt;type&gt;jar&lt;/type&gt;
+    &lt;scope&gt;compile&lt;/scope&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>2- Create a Jedis Pool</p>
+<pre><code class="language-java">JedisPool pool = new JedisPool(new JedisPoolConfig(), &quot;localhost&quot;);
+</code></pre>
+<p>3- Use the pool in your application</p>
+<pre><code class="language-java">/// Jedis implements Closeable. Hence, the jedis instance will be auto-closed after the last statement.
+try (Jedis jedis = pool.getResource()) {
+  /// ... do stuff here ... for example
+  jedis.set(&quot;foo&quot;, &quot;bar&quot;);
+  String foobar = jedis.get(&quot;foo&quot;);
+  jedis.zadd(&quot;sose&quot;, 0, &quot;car&quot;); jedis.zadd(&quot;sose&quot;, 0, &quot;bike&quot;); 
+  Set&lt;String&gt; sose = jedis.zrange(&quot;sose&quot;, 0, -1);
+}
+/// ... when closing your application:
+pool.close();
+</code></pre>
+<hr>
+<h4>Ecosystem</h4>
+<div class="row ">
+    <div class="col-4 d-flex justify-content-center">
+        <img src="/redis-developer/images/logo/spring-logo.svg" height="40">
+    </div>
+    <div class="col-4 d-flex justify-content-center">
+        <img src="/redis-developer/images/logo/vertx-logo.png" height="30"> 
+    </div>
+    <div class="col-4 d-flex justify-content-center">
+        <img src="/redis-developer/images/logo/quarkus_logo_horizontal_rgb_reverse.svg" height="50">
+    </div>
+</div>
+<hr>
+<h4>Demonstrations</h4>
+<div class="row">
+<div class="col-6">
+    <div class="h5">
+    <img src="/redis-developer/images/logo/logo_small.png" height="25" />
+    Redis 101
+    </div>
+    <ul>
+        <li><a href="https://github.com/Redislabs-Solution-Architects/redis-connect" >Connect to Redis: all languages</a></li><li><a href="https://github.com/tgrall/redis-streams-101-java" >Getting Started with Redis Streams</a></li><li><a href="https://github.com/redis-developer/getting-started-redisearch" >Getting Started with RediSearch</a></li><li><a href="https://github.com/redis-developer/redis-streams-in-action" >Redis Streams & Consumer Groups</a></li></ul>
+</div>              
+<div class="col-6">
+    <div class="h5">
+    <img src="/redis-developer/images/logo/logo_small.png" height="25" />
+    Complete Applications
+    </div>
+    <ul>
+    <li><a href="https://github.com/Redislabs-Solution-Architects/brewdis" >Brewdis</a></li><li><a href="https://github.com/RedisTimeSeries/redis-pop-up-store" >Popup Store</a></li><li><a href="https://github.com/tgrall/redis-microservices-demo" >Microservices with Redis</a></li>
+    </ul>
+</div>  
+</div>
+<hr>
+<h4>Redis University</h4>
+<div class="row ">
+    <div class="col-8 d-flex justify-content-center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CmQMdJefTjc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+    </div>
+    <div class="col-4">
+        <h5>Redis for Java Developers</h5>
+        A complete Redis development course for the Java programmer.<br>
+        <a href="https://university.redislabs.com/register?course_id=course-v1%3Aredislabs%2BRU102J%2B2020_06&enrollment_action=enroll" target="_blank">
+        <button class="btn btn-dark">Enroll</button>
+        </a>
+    </div>
+</div>
+
+        </main>
+
+      </div>
+
+
+    </div>
+
+
+
+          
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+      </body>
+    </html>
